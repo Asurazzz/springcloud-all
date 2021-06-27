@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    active: ek2
+  application:
+    name: EurekaServer

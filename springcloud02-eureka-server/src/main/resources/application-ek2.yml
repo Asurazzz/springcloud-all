@@ -1,0 +1,14 @@
+
+#Edit Configuration中可以将Active profiles改为对应的后缀名
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ek1.com:7001/eureka/
+  instance:
+    hostname: ek2.com
+server:
+  port: 7002
+spring:
+  application:
+    name: EurekaServer
