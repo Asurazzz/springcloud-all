@@ -9,3 +9,8 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8001/eureka/
+
+#开启Hystrix功能
+feign:
+  hystrix:
+    enabled: true

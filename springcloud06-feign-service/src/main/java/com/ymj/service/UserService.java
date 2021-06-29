@@ -2,6 +2,7 @@ package com.ymj.service;
 
 import com.ymj.domain.CommonResult;
 import com.ymj.domain.User;
+import com.ymj.service.impl.UserFallbackService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
  * @Date 2021/6/29 17:43
  * @Created by yemingjie
  */
-@FeignClient(value = "user-service")
+@FeignClient(value = "user-service", fallback = UserFallbackService.class)
 public interface UserService {
     @PostMapping("/user/create")
     CommonResult create(@RequestBody User user);
